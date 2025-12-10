@@ -1,0 +1,265 @@
+/* 主按钮样式 */
+.primaryButton {
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s;
+}
+.primaryButton:hover, .primaryButton:focus {
+  background: var(--color-primary-dark);
+  color: #fff;
+}
+
+/* Tag国风主色 */
+
+.container {
+  min-height: 70vh;
+  padding: 24px;
+  background: #fff;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+.batchCard,
+.wordCard,
+.emptyCard {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
+.batchCard :global(.ant-card-body) {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.wordCard :global(.ant-card-body) {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.rowFullHeight {
+  flex: 1;
+  display: flex;
+}
+
+.colFullHeight {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.batchList {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.batchItem {
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  background: #fff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.batchItem:hover {
+  border-color: #bfa76a;
+  box-shadow: 0 2px 8px rgba(191, 167, 106, 0.12);
+  transform: translateY(-1px);
+}
+
+.batchItem:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(24, 144, 255, 0.1);
+}
+
+.batchInfo {
+  margin-bottom: 12px;
+}
+
+.batchHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.batchNo {
+  font-size: 16px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.finished {
+  background: #f6ffed;
+  color: #52c41a;
+  border: 1px solid #b7eb8f;
+}
+
+.unfinished {
+  background: #fff7e6;
+  color: #fa8c16;
+  border: 1px solid #ffd591;
+}
+
+.batchDetails {
+  color: #666;
+  font-size: 14px;
+}
+
+.batchActions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.wordList {
+  margin-top: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.wordList :global(.ant-table-wrapper) {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.wordList :global(.ant-table) {
+  flex: 1;
+}
+
+.saveButton {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.emptyState {
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  padding: 40px 20px;
+}
+
+/* 骨架屏样式 */
+.emptyState :global(.ant-skeleton) {
+  padding: 20px;
+}
+
+.emptyState :global(.ant-skeleton-paragraph) {
+  margin-bottom: 16px;
+}
+
+/* 表格样式优化 */
+.wordList :global(.ant-table-thead > tr > th) {
+  background: #f8f5ec;
+  font-weight: 600;
+}
+
+.wordList :global(.ant-table-tbody > tr:hover > td) {
+  background: #f5f5f5;
+}
+
+.wordList :global(.ant-checkbox-wrapper) {
+  margin-right: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+  
+  .batchActions {
+    flex-direction: column;
+  }
+  
+  .batchActions button {
+    width: 100%;
+  }
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 高亮选中状态 */
+.batchItem.selected {
+  border-color: #bfa76a;
+  background: #f8f5ec;
+  box-shadow: 0 2px 8px rgba(191, 167, 106, 0.2);
+}
+
+/* 错误状态样式 */
+.errorState {
+  text-align: center;
+  color: #ff4d4f;
+  font-size: 14px;
+  padding: 20px;
+  background: #fff2f0;
+  border: 1px solid #ffccc7;
+  border-radius: 6px;
+  margin: 16px 0;
+}
+
+/* 成功状态样式 */
+.successState {
+  text-align: center;
+  color: #52c41a;
+  font-size: 14px;
+  padding: 20px;
+  background: #f6ffed;
+  border: 1px solid #b7eb8f;
+  border-radius: 6px;
+  margin: 16px 0;
+}
+
+/* 面包屑间距 */
+.container :global(.ant-breadcrumb) {
+  margin-bottom: 8px !important;
+}
+
+.breadcrumbWrapper {
+  padding: 24px 24px 0 24px;
+  background: #fff;
+}
+
+.breadcrumb {
+  margin-bottom: 0;
+}
+
+.viewWordsModalTable :global(.ant-table-cell) {
+  font-size: 16px;
+  line-height: 2;
+  text-align: center;
+} 

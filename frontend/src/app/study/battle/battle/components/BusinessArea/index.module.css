@@ -1,0 +1,303 @@
+/* 删除 .businessArea 样式（如有） */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.inputGroup {
+  background: #faf8f2;
+  border-radius: 8px;
+  padding: 24px 20px 16px 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(191,167,106,0.06);
+}
+
+.wordInputArea {
+  margin-bottom: 20px;
+  border-bottom: 1.5px dashed #e0d7c3;
+  padding-bottom: 16px;
+}
+
+.inflectionArea {
+  margin-bottom: 20px;
+  border-bottom: 1.5px dashed #e0d7c3;
+  padding-bottom: 16px;
+}
+
+.phraseArea {
+  margin-bottom: 0;
+}
+
+.inflectionArea td,
+.phraseArea td {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+/* 确保变形形式表格第二列有足够空间 */
+.inflectionArea td:last-child {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+
+/* 短语区域输入框和答对标识的容器 */
+.phraseArea td:last-child {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fullWidthTable {
+  width: 100%;
+}
+
+.wordInput {
+  width: 130px;
+  height: 30px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1.5px solid #e0d7c3;
+  background: #f9f6ef;
+  text-align: center;
+  font-family: var(--font-main);
+}
+
+.checkButton {
+  height: 40px;
+  font-size: 16px;
+  border-radius: 6px;
+  background: #f8f5ec;
+  color: #4b3a1e;
+  border: 1.5px solid #bfa76a;
+  font-weight: bold;
+  box-shadow: none;
+  margin-left: 8px;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.checkButton:hover, .checkButton:focus {
+  background: #f3e9d2;
+  color: #bfa76a;
+  border-color: #bfa76a;
+  box-shadow: 0 0 0 2px #f3e9d2;
+}
+
+.inflectionItem,
+.phraseItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.inflectionLabel{
+  width: 80px;
+  font-size: 14px;
+  color: #666;
+  font-weight: bold;
+}
+.phraseLabel {
+  width: 140px;
+  min-width: 140px;
+  font-size: 14px;
+  color: #666;
+  font-weight: bold;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+  line-height: 1.4;
+}
+
+/* 在iPad等设备上调整短语标签宽度 */
+@media (max-width: 1024px) {
+  .phraseLabel {
+    width: 150px;
+    min-width: 150px;
+  }
+}
+
+/* 在小屏幕设备上进一步调整 */
+@media (max-width: 768px) {
+  .phraseLabel {
+    width: 130px;
+    min-width: 130px;
+  }
+}
+
+.inflectionInput {
+  width: 130px;
+  min-width: 80px;
+  max-width: 200px;
+  height: 30px;
+  border-radius: 8px;
+  border: 1.5px solid #e0d7c3;
+  background: #f9f6ef;
+  font-size: 14px;
+  font-family: var(--font-main);
+}
+
+.phraseInput {
+  width: 140px;
+  min-width: 80px;
+  max-width: 180px;
+  height: 30px;
+  border-radius: 8px;
+  border: 1.5px solid #e0d7c3;
+  background: #f9f6ef;
+  font-size: 14px;
+  font-family: var(--font-main);
+}
+
+/* 在iPad等设备上调整短语输入框宽度 */
+@media (max-width: 1024px) {
+  .phraseInput {
+    width: 150px;
+    min-width: 80px;
+    max-width: 190px;
+  }
+}
+
+/* 在小屏幕设备上进一步调整 */
+@media (max-width: 768px) {
+  .phraseInput {
+    width: 120px;
+    min-width: 80px;
+    max-width: 160px;
+  }
+}
+
+.nextButtonWrapper {
+  display: flex;
+  justify-content:  flex-start; /* 改为左对齐 */
+  margin-top: 12px;
+  margin-left: 20px; 
+}
+
+.nextButton {
+  min-width: 160px;
+  height: 48px !important;
+  font-size: 22px;
+  border-radius: 8px;
+  background: #f8f5ec;
+  color: #4b3a1e;
+  border: 1.5px solid #bfa76a;
+  font-weight: bold;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  padding: 0 24px;
+}
+
+/* 在iPad等设备上增大按钮尺寸 */
+@media (max-width: 1024px) {
+  .nextButton {
+    min-width: 180px;
+    height: 56px !important;
+    font-size: 24px;
+    padding: 0 32px;
+  }
+}
+
+/* 在小屏幕设备上进一步增大 */
+@media (max-width: 768px) {
+  .nextButton {
+    min-width: 200px;
+    height: 60px !important;
+    font-size: 26px;
+    padding: 0 36px;
+  }
+}
+
+.nextButton:hover, .nextButton:focus {
+  background: #f3e9d2;
+  color: #bfa76a;
+  border-color: #bfa76a;
+  box-shadow: 0 0 0 2px #f3e9d2;
+}
+
+.wordInfoContent {
+  padding: 20px;
+}
+
+.wordInfoContent h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.wordInfoContent p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.wordInfoContent h3 {
+  font-size: 18px;
+  color: #333;
+  margin: 16px 0 8px;
+}
+
+.correctMark {
+  color: #52c41a;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nextButtonContent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.inflectionArea table,
+.phraseArea table {
+  margin-left: 12px;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+
+/* 控制短语区域表格列的宽度 */
+.phraseArea td:first-child {
+  width: 100px;
+  padding-right: 8px;
+  vertical-align: top;
+  padding-top: 8px;
+}
+
+.phraseArea td:last-child {
+  width: auto;
+  vertical-align: middle;
+}
+
+/* 在iPad等设备上调整 */
+@media (max-width: 1024px) {
+  .phraseArea td:first-child {
+    width: 110px;
+    padding-right: 6px;
+  }
+}
+
+/* 在小屏幕设备上调整 */
+@media (max-width: 768px) {
+  .phraseArea td:first-child {
+    width: 90px;
+    padding-right: 4px;
+  }
+} 

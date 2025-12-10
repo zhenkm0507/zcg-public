@@ -1,0 +1,18 @@
+.container {
+  padding: 24px;
+  background: #fff;
+  min-height: 100vh;
+}
+
+.tabs {
+  margin-bottom: 24px;
+}
+
+.tableWrapper :global(.ant-table-thead > tr > th) {
+  background: #f8f5ec;
+  font-weight: 600;
+}
+
+.tableWrapper :global(.ant-table-tbody > tr:hover > td) {
+  background: #f5f5f5;
+} 

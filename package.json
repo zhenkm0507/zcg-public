@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "turn.js": "^1.0.5",
+    "zustand": "^5.0.5"
+  }
+}

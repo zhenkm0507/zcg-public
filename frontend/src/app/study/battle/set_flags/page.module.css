@@ -1,0 +1,94 @@
+.container {
+  padding: 24px;
+  background: #fff;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.filterWrapper {
+  margin-bottom: 24px;
+}
+
+.tableWrapper {
+  margin-top: 24px;
+}
+
+.modalContent {
+  padding: 16px 0;
+}
+
+.section {
+  margin-bottom: 24px;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.flagGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 8px;
+  border: 1px solid #f0f0f0;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+.flagItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.flagItem:hover {
+  background: #f0f0f0;
+}
+
+.flagItem input[type="checkbox"] {
+  margin: 0;
+}
+
+.flagItem label {
+  margin: 0;
+  cursor: pointer;
+  flex: 1;
+}
+
+.stats {
+  padding: 16px;
+  background: var(--color-primary-bg, #f8f5ec);
+  border-radius: 6px;
+  border: 1px solid var(--color-primary, #bfa76a);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+  
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .flagGrid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 8px;
+  }
+} 

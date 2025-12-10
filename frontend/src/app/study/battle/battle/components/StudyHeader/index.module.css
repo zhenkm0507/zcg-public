@@ -1,0 +1,102 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 24px;
+  height: 52px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border-radius: 0;
+  border-bottom: 1.5px solid #f0f0f0;
+  margin-bottom: 0;
+  transition: background 0.3s, box-shadow 0.3s;
+  width: 100%;
+}
+
+.progressContainer {
+  display: flex;
+  gap: 40px;
+}
+
+.progressItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.label {
+  font-size: 16px;
+  color: #2d3a4a;
+  margin-right: 8px;
+  white-space: nowrap;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.streak {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-left: 1.5px solid #eee;
+  margin-left: 40px;
+  padding-left: 40px;
+}
+
+.streakLabel {
+  font-size: 16px;
+  color: #b8860b;
+  font-weight: 600;
+}
+
+.streakValue {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ff4d4f;
+  font-style: italic;
+  text-shadow: 0 2px 8px rgba(255,77,79,0.12);
+  padding-right: 10px;
+}
+
+.menu {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-bottom: none;
+}
+
+/* 覆盖 antd 默认样式 */
+.menu :global(.ant-menu-item) {
+  font-size: 16px;
+  height: 48px;
+  line-height: 48px;
+}
+
+.menu :global(.ant-menu-item-selected) {
+  font-weight: 500;
+}
+
+.progressItem :global(.ant-progress) {
+  min-width: 80px;
+  width: 18vw;
+  max-width: 200px;
+}
+
+.percentBox {
+  display: inline-flex;
+  align-items: center;
+}
+
+.percent {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Consolas', 'Menlo', 'Monaco', monospace;
+}
+
+.fraction {
+  color: #888;
+  font-size: 12px;
+  margin-left: 5px;
+  font-family: 'Consolas', 'Menlo', 'Monaco', monospace;
+  display: inline-flex;
+  align-items: center;
+} 

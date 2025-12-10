@@ -1,0 +1,18 @@
+.container {
+  padding: 0;
+  background: #fff;
+  min-height: 100vh;
+}
+
+.container :global(.ant-collapse-header) {
+  font-weight: 500;
+}
+
+.container :global(.ant-table) {
+  margin-top: 16px;
+}
+
+.container :global(.ant-btn-link) {
+  padding: 0;
+  height: auto;
+} 

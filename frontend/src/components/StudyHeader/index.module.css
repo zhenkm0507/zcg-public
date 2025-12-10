@@ -1,0 +1,53 @@
+.header {
+  padding: 16px;
+  background: #fff;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.progressArea {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.progressItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.progressLabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.progressValue {
+  font-weight: 500;
+  color: #1890ff;
+}
+
+.streakContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.streakIcon {
+  color: #ff4d4f;
+  font-size: 16px;
+}
+
+.streakText {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+} 

@@ -1,0 +1,165 @@
+.container {
+  padding: 24px;
+  background: #fff;
+  min-height: 100vh;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.backButton {
+  padding: 0;
+  height: auto;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8c8c8c;
+  transition: all 0.3s;
+}
+
+.backButton:hover {
+  color: var(--color-primary);
+  transform: translateX(-4px);
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.wordTitle {
+  margin-bottom: 24px !important;
+  color: var(--color-primary-dark);
+  text-align: center;
+}
+
+.descriptions {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* 修复Descriptions组件的间距问题 */
+.descriptions :global(.ant-descriptions-item) {
+  padding-bottom: 40px !important;
+}
+
+.descriptions :global(.ant-descriptions-item:last-child) {
+  padding-bottom: 0 !important;
+}
+
+.descriptions :global(.ant-descriptions-item-label) {
+  color: #666;
+  font-weight: 500;
+  padding-bottom: 20px !important;
+}
+
+.descriptions :global(.ant-descriptions-item-content) {
+  color: #262626;
+  line-height: 1.6;
+}
+
+.inflection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.inflectionItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.inflectionLabel {
+  color: #8c8c8c;
+  min-width: 80px;
+}
+
+.inflectionValue {
+  color: #262626;
+  font-weight: 500;
+}
+
+.phrases {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.phrase {
+  background: var(--color-primary-bg);
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.phraseHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.phraseNumber {
+  color: var(--color-primary);
+  font-weight: 500;
+  min-width: 24px;
+}
+
+.phraseText {
+  font-weight: 500;
+  color: var(--color-primary-dark);
+}
+
+.phraseExp {
+  color: #595959;
+  margin: 0 !important;
+}
+
+.exampleSentences {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.exampleSentence {
+  display: flex;
+  align-items: flex-start;
+  background: var(--color-primary-bg);
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid var(--color-primary);
+  margin-bottom: 20px;
+}
+
+.sentenceNumber {
+  color: var(--color-primary);
+  font-weight: 500;
+  margin-right: 8px;
+  min-width: 24px;
+}
+
+.sentenceText {
+  margin: 0 !important;
+  color: #262626;
+}
+
+.flagTag {
+  color: var(--color-primary-dark);
+  border-color: var(--color-primary);
+  background: var(--color-primary-bg);
+  font-weight: bold;
+  border-radius: 4px;
+  margin-right: 8px;
+  margin-bottom: 4px;
+}
+
+/* 面包屑间距调整 */
+.container :global(.ant-breadcrumb) {
+  margin-bottom: 16px !important;
+} 

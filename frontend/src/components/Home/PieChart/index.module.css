@@ -1,0 +1,49 @@
+.chartContainer {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+  width: 100%;
+  height: 400px;
+  margin: 15px 0 0 0;
+}
+
+.chartContainer:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.large {
+  width: 100%;
+  height: 360px;
+}
+
+.small {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+/* 针对平板设备的响应式调整 */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .small {
+    height: 220px;
+  }
+}
+
+/* 针对iPad等设备的进一步优化 */
+@media (max-width: 1024px) {
+  .small {
+    height: 200px;
+  }
+}
+
+/* 针对小屏幕设备的优化 */
+@media (max-width: 768px) {
+  .small {
+    height: 180px;
+  }
+  
+  .large {
+    height: 320px;
+  }
+} 

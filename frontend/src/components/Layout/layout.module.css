@@ -1,0 +1,265 @@
+.layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0 2rem;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.logoImage {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    margin-bottom: 2px;
+}
+
+.logoImage:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.logoText {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.clientHeader {
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    background: #001529;
+    margin-bottom: 24px;
+}
+
+.menu {
+    flex: 1;
+    margin: 0 2rem;
+    background: transparent;
+    border-bottom: none;
+}
+
+.menu::-webkit-scrollbar {
+    height: 3px;
+}
+
+.menu::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.headerRight {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.wordBankSelect {
+    min-width: 150px;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-size: 0.9rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+}
+
+.userInfo:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.userIcon {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
+
+.levelIcon {
+    color: #bfa76a;
+    font-size: 12px;
+}
+
+.userNickname {
+    font-weight: 600;
+    color: #fff;
+}
+
+.userLevel {
+    color: #bfa76a;
+    font-weight: 500;
+    font-size: 0.85rem;
+    padding: 2px 8px;
+    background: rgba(191, 167, 106, 0.2);
+    border-radius: 12px;
+    border: 1px solid rgba(191, 167, 106, 0.3);
+}
+
+.userLevelLoading {
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+    font-size: 0.85rem;
+}
+
+.content {
+    flex: 1;
+    margin: 8rem 8% 4rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+        0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0.05) 100%
+    );
+    pointer-events: none;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 2rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.studioName {
+    font-weight: bold;
+    color: #bfa76a;
+    text-shadow: 0 0 8px rgba(191, 167, 106, 0.5);
+    letter-spacing: 2px;
+    font-size: 1.1em;
+    background: linear-gradient(45deg, #bfa76a, #d4c08a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 8px rgba(191, 167, 106, 0.5);
+    }
+    to {
+        text-shadow: 0 0 12px rgba(191, 167, 106, 0.8), 0 0 20px rgba(191, 167, 106, 0.3);
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 12px;
+    }
+    
+    .clientHeader {
+        padding: 0 12px;
+    }
+    
+    .logo {
+        margin-right: 12px;
+        gap: 8px;
+    }
+    
+    .logoImage {
+        width: 26px;
+        height: 26px;
+        margin-bottom: 1px;
+    }
+    
+    .logoText {
+        font-size: 16px;
+    }
+    
+    .wordBankSelect {
+        width: 120px;
+        margin-right: 8px;
+    }
+    
+    .userInfo {
+        font-size: 12px;
+        padding: 4px 8px;
+        gap: 4px;
+    }
+    
+    .userNickname {
+        font-size: 11px;
+    }
+    
+    .userLevel {
+        font-size: 10px;
+        padding: 1px 6px;
+    }
+    
+    .userLevelLoading {
+        font-size: 10px;
+    }
+    
+    .userIcon {
+        font-size: 12px;
+    }
+    
+    .levelIcon {
+        font-size: 10px;
+    }
+} 

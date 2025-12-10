@@ -1,0 +1,204 @@
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding-left: 8%;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.loginBox {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.loginBox::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #000000, #333333);
+    z-index: -1;
+    border-radius: 10px;
+    opacity: 0.1;
+}
+
+.titleWrapper {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.title {
+    color: #000000;
+    font-size: 36px;
+    font-family: "子漆逍遥行", "FZZiQiXiaoYaoXing", serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 16px;
+    font-family: "子漆逍遥行", "FZZiQiXiaoYaoXing", serif;
+    letter-spacing: 2px;
+}
+
+.form {
+    width: 100%;
+}
+
+.form :global(.ant-form-item) {
+    margin-bottom: 24px;
+}
+
+.form :global(.ant-input-affix-wrapper) {
+    padding: 8px 11px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: all 0.3s;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.form :global(.ant-input-affix-wrapper:hover),
+.form :global(.ant-input-affix-wrapper-focused) {
+    border-color: #000000;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.form :global(.ant-btn) {
+    height: 40px;
+    font-size: 16px;
+    background: #000000;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.form :global(.ant-btn:hover) {
+    background: #333333;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form :global(.ant-input-affix-wrapper .anticon) {
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.form :global(.ant-input) {
+    background: transparent;
+    font-family: "子漆逍遥行", "FZZiQiXiaoYaoXing", serif;
+    font-size: 16px;
+}
+
+.form :global(.ant-input::placeholder) {
+    color: rgba(0, 0, 0, 0.35);
+    font-family: "子漆逍遥行", "FZZiQiXiaoYaoXing", serif;
+}
+
+.loginButton {
+    font-family: "子漆逍遥行", "FZZiQiXiaoYaoXing", serif;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+@media (max-height: 700px) {
+    .loginBox {
+        padding: 30px;
+        margin: 10px;
+    }
+
+    .title {
+        font-size: 32px;
+        margin-bottom: 6px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .form :global(.ant-form-item) {
+        margin-bottom: 20px;
+    }
+}
+
+/* 登录页及弹窗按钮水墨风格覆盖 */
+.loginPage :global(.ant-btn-primary) {
+  background: #000 !important;
+  border: none !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  font-family: "子漆逍遥行", "FZZiQiXiaoYaoXing", serif;
+}
+.loginPage :global(.ant-btn-primary:hover),
+.loginPage :global(.ant-btn-primary:focus) {
+  background: #333 !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2) !important;
+}
+
+.studioMark {
+    margin-top: 28px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    opacity: 0.95;
+    font-size: 1em;
+}
+
+.studioName {
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 1.08em;
+    background: linear-gradient(45deg, #bfa76a, #d4c08a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 8px rgba(191, 167, 106, 0.18);
+    font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+}
+
+.studioSub {
+    color: #555;
+    opacity: 0.8;
+    font-weight: normal;
+    font-size: 0.98em;
+    margin-left: 2px;
+    font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+}
+
+.studioLantern {
+    font-size: 1.3em;
+    margin-right: 2px;
+    filter: drop-shadow(0 0 4px #bfa76a88);
+    animation: lantern-swing 2.2s infinite ease-in-out alternate;
+}
+
+@keyframes lantern-swing {
+    0% { transform: rotate(-8deg);}
+    100% { transform: rotate(8deg);}
+} 

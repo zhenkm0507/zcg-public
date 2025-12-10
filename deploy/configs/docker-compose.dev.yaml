@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  # 后端API服务（开发模式）
+  backend:
+    image: ${BACKEND_IMAGE:-zcg-backend:dev}
+    build:
+      context: ../../backend
+      dockerfile: ../images/Dockerfile.backend
+    container_name: zcg-backend-dev
+    restart: unless-stopped
+    volumes:
+      - ../../backend:/app
+      - ../../logs:/app/logs
+      - ../../backend/.env:/app/.env:ro
+      - /app/nltk_data:/app/nltk_data
+    ports:
+      - "8000:8000"
+    networks:
+      - zcg-network-dev
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+
+  # 前端应用（开发模式）
+  frontend:
+    image: ${FRONTEND_IMAGE:-zcg-frontend:dev}
+    build:
+      context: ../../frontend
+      dockerfile: ../images/Dockerfile.frontend
+    container_name: zcg-frontend-dev
+    restart: unless-stopped
+    volumes:
+      - ../../frontend:/app
+      - ../../frontend/.env:/app/.env:ro
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - zcg-network-dev
+    command: ["npm", "run", "dev"]
+
+networks:
+  zcg-network-dev:
+    driver: bridge 

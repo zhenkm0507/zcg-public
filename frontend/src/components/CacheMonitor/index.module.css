@@ -1,0 +1,234 @@
+.cacheMonitor {
+  padding: 20px;
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+/* 统计信息区域 */
+.statsSection {
+  margin-bottom: 24px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.statCard {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 1px solid #e8e8e8;
+}
+
+.statValue {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1890ff;
+  margin-bottom: 8px;
+}
+
+.statLabel {
+  color: #666;
+  font-size: 14px;
+}
+
+/* 类别统计区域 */
+.categoryStats {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e8e8e8;
+}
+
+.categoryStats h4 {
+  margin: 0 0 16px 0;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.categoryCard {
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  padding: 16px;
+  background: #fafafa;
+}
+
+.categoryHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.categoryIcon {
+  margin-right: 8px;
+  color: #1890ff;
+  font-size: 16px;
+}
+
+.categoryName {
+  font-weight: 600;
+  color: #333;
+  flex: 1;
+}
+
+.categoryInfo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 12px;
+  color: #666;
+}
+
+.categoryInfo div {
+  text-align: center;
+  padding: 4px 8px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+}
+
+/* 表格区域 */
+.tableSection {
+  margin-bottom: 24px;
+}
+
+.tableSection h4 {
+  margin: 0 0 16px 0;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* 文件路径样式 */
+.filePath {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 12px;
+  color: #333;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .cacheMonitor {
+    padding: 12px;
+  }
+  
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .categoryGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .categoryHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .categoryInfo {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  
+  .filePath {
+    max-width: 200px;
+  }
+}
+
+/* 动画效果 */
+.statCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.categoryCard:hover {
+  border-color: #1890ff;
+  box-shadow: 0 2px 8px rgba(24, 144, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* 加载状态 */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* 状态标签样式 */
+.statusTag {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.statusTag.needsUpdate {
+  background: #fff2f0;
+  border: 1px solid #ffccc7;
+  color: #cf1322;
+}
+
+.statusTag.upToDate {
+  background: #f6ffed;
+  border: 1px solid #b7eb8f;
+  color: #389e0d;
+}
+
+/* 进度条样式 */
+.progressContainer {
+  margin-top: 8px;
+}
+
+/* 操作按钮样式 */
+.actionButton {
+  margin-left: 8px;
+}
+
+.actionButton:first-child {
+  margin-left: 0;
+}
+
+/* 表格滚动条样式 */
+.tableScroll {
+  overflow-x: auto;
+}
+
+.tableScroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tableScroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.tableScroll::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.tableScroll::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+} 

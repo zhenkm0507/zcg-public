@@ -1,0 +1,283 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-main: "PingFang SC", "SimSun", "STSong","Microsoft YaHei", serif;
+  --color-primary: #bfa76a;
+  --color-primary-dark: #4b3a1e;
+  --color-primary-bg: #f8f5ec;
+  --color-primary-hover: #bfa76a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-main);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: var(--font-main);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-main);
+}
+
+input, button, textarea, select {
+  font-family: var(--font-main);
+}
+
+.ant-typography, .ant-btn, .ant-input, .ant-select, .ant-form, .ant-table, .ant-menu, .ant-tabs, .ant-tag {
+  font-family: var(--font-main) !important;
+}
+
+#root {
+  height: 100%;
+}
+
+/* 动画区 turn.js 内容专用样式，复刻浮窗风格 */
+.turnContent-section {
+  margin-bottom: 20px;
+}
+.turnContent-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+  margin-top: 18px;
+}
+.turnContent-section:first-child .turnContent-title {
+  margin-top: 0;
+}
+.turnContent-content {
+  font-size: 16px;
+  color: #222;
+  margin-left: 24px;
+  line-height: 1.8;
+  white-space: pre-line;
+}
+.turnContent-table {
+  margin-left: 24px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: auto;
+  width: auto;
+}
+/* 去掉表格横线 */
+.turnContent-table tr {
+  border-bottom: none;
+}
+.turnContent-th, .turnContent-td {
+  font-size: 16px;
+  text-align: left;
+  vertical-align: top;
+  padding: 1px 8px 1px 0;
+  line-height: 1.8;
+}
+.turnContent-th {
+  min-width: 90px;
+  color: #666;
+  font-weight: 600;
+}
+.turnContent-td {
+  color: #222;
+  font-weight: 400;
+}
+.turnContent-tagRow {
+  margin-left: 24px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+.turnContent-tag {
+  display: inline-block;
+  background: #f8f5ec;
+  color: #bfa76a;
+  border-radius: 4px;
+  padding: 2px 10px;
+  font-size: 14px;
+  border: 1px solid #e0d7c3;
+  font-family: inherit;
+  margin-bottom: 2px;
+}
+
+/* turn.js 父层强制允许内容溢出，保证滚动条可见 */
+.turn-page-wrapper,
+.hard,
+.page,
+.page-wrapper {
+  overflow: visible !important;
+}
+
+/* turn.js 动画区内容区强制滚动条 */
+.page-content {
+  max-height: 800px !important;
+  overflow-y: auto !important;
+}
+
+/* 适配新版AntD Modal动画类名，极致缩放动画，强制生效 */
+.ant-modal-zoom-enter,
+.ant-modal-zoom-appear {
+  opacity: 0 !important;
+  transform: scale(0.1) !important;
+}
+.ant-modal-zoom-enter-active,
+.ant-modal-zoom-appear-active {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+  transition: opacity 5s cubic-bezier(.4,0,.2,1) !important;
+  transition: transform 5s cubic-bezier(.4,0,.2,1) !important;
+}
+.ant-modal-zoom-leave {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+.ant-modal-zoom-leave-active {
+  opacity: 0 !important;
+  transform: scale(0.1) !important;
+  transition: opacity 5s cubic-bezier(.4,0,.2,1) !important;
+  transition: transform 5s cubic-bezier(.4,0,.2,1) !important;
+}
+
+/* 自定义AntD Modal动画：custom-modal-zoom */
+.custom-modal-zoom-enter,
+.custom-modal-zoom-appear {
+  opacity: 0 !important;
+  transform: scale(0.3) !important;
+}
+.custom-modal-zoom-enter-active,
+.custom-modal-zoom-appear-active {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+  transition: opacity 0.38s cubic-bezier(.4,0,.2,1) !important;
+  transition: transform 0.38s cubic-bezier(.4,0,.2,1) !important;
+}
+.custom-modal-zoom-leave {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+.custom-modal-zoom-leave-active {
+  opacity: 0 !important;
+  transform: scale(0.3) !important;
+  transition: opacity 0.38s cubic-bezier(.4,0,.2,1) !important;
+  transition: transform 0.38s cubic-bezier(.4,0,.2,1) !important;
+}
+
+/* AntD主按钮主色全局覆盖 */
+:global(.ant-btn-primary) {
+  background: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: #fff !important;
+}
+:global(.ant-btn-primary:hover), :global(.ant-btn-primary:focus) {
+  background: var(--color-primary-dark) !important;
+  border-color: var(--color-primary-dark) !important;
+  color: #fff !important;
+}
+
+/* 国风主色Tag全局样式，保证所有页面一致 */
+:global(.ant-tag.primaryTag),
+[class~="ant-tag"][class~="primaryTag"] {
+  background: var(--color-primary-bg) !important;
+  border-color: var(--color-primary) !important;
+  color: var(--color-primary-dark) !important;
+}
+
+/* 防止长按菜单和图片选择 - 全局样式 */
+:global(.settings-protected-image) {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -webkit-touch-callout: none !important;
+  -webkit-user-drag: none !important;
+  -khtml-user-drag: none !important;
+  -moz-user-drag: none !important;
+  -o-user-drag: none !important;
+  user-drag: none !important;
+  pointer-events: none !important;
+}
+
+/* 防止长按菜单 - 针对未解锁装备 */
+:global(.locked-equipment) {
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  user-select: none !important;
+}
+
+/* 国风主色Tag全局样式，保证所有页面一致 */
+:global(.ant-tag) {
+  font-weight: bold !important;
+  border-radius: 6px !important;
+  padding: 0 12px !important;
+  font-size: 15px !important;
+  box-shadow: none !important;
+  border-width: 1.5px !important;
+}
+
+/* 自定义成功消息样式，使用系统主色调 */
+:global(.custom-success-message .ant-message-notice-content) {
+  background: var(--color-primary-bg) !important;
+  border: 1px solid var(--color-primary) !important;
+  color: var(--color-primary-dark) !important;
+}
+
+/* 覆盖所有成功消息的图标颜色 */
+:global(.ant-message-success .anticon) {
+  color: var(--color-primary) !important;
+}
+
+:global(.ant-message-notice-content .ant-message-success .anticon) {
+  color: var(--color-primary) !important;
+}
+
+:global(.ant-message .anticon-check-circle) {
+  color: var(--color-primary) !important;
+}
+
+:global(.ant-message-success .anticon-check-circle) {
+  color: var(--color-primary) !important;
+}
+
+/* 更具体的选择器 */
+:global(.ant-message-notice .ant-message-notice-content .ant-message-success .anticon) {
+  color: var(--color-primary) !important;
+}
+
+/* 强制覆盖所有可能的成功消息图标 */
+:global(.ant-message .anticon-check-circle),
+:global(.ant-message-success .anticon-check-circle),
+:global(.ant-message-notice-content .ant-message-success .anticon-check-circle),
+:global(.ant-message-notice .ant-message-notice-content .ant-message-success .anticon-check-circle),
+:global(.ant-message-notice .ant-message-notice-content .ant-message-success svg),
+:global(.ant-message .ant-message-success svg),
+:global(.ant-message-success svg) {
+  color: var(--color-primary) !important;
+  fill: var(--color-primary) !important;
+}
+
+/* 针对 Ant Design 5 的 CSS-in-JS 样式 */
+:global([class*="ant-message"] [class*="anticon-check-circle"]) {
+  color: var(--color-primary) !important;
+  fill: var(--color-primary) !important;
+}
+
+:global([class*="ant-message-success"] [class*="anticon"]) {
+  color: var(--color-primary) !important;
+  fill: var(--color-primary) !important;
+}

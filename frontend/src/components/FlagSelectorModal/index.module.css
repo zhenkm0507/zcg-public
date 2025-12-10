@@ -1,0 +1,52 @@
+.modal {
+  .ant-modal-header {
+    background: var(--color-primary-bg);
+    border-bottom: 1px solid var(--color-primary);
+  }
+
+  .ant-modal-title {
+    color: var(--color-primary-dark);
+    font-weight: bold;
+  }
+
+  .ant-modal-body {
+    padding: 24px;
+  }
+}
+
+.content {
+  min-height: 200px;
+}
+
+.radioGroup {
+  width: 100%;
+}
+
+.radioItem {
+  display: block;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+
+  &:hover {
+    background: var(--color-primary-bg);
+    border-color: var(--color-primary);
+  }
+
+  .ant-radio-checked {
+    .ant-radio-inner {
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+  }
+
+  .ant-radio-inner {
+    border-color: var(--color-primary);
+  }
+
+  .ant-radio:hover .ant-radio-inner {
+    border-color: var(--color-primary);
+  }
+}

@@ -1,0 +1,142 @@
+.container {
+    padding: 24px;
+    min-height: 100vh;
+    background: #f0f2f5;
+}
+
+.loadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.loadingText {
+    padding: 20px;
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 14px;
+}
+
+.errorContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    color: #ff4d4f;
+    font-size: 14px;
+}
+
+.welcome {
+    margin-bottom: 24px !important;
+}
+
+.statsRow {
+    margin-bottom: 24px;
+}
+
+.planCard {
+    margin-top: 24px;
+}
+
+.breadcrumbWrapper {
+    max-width: 1200px;
+    margin: 0 auto 0 auto !important;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    position: relative;
+    z-index: 2;
+    padding: 8px 24px 0 24px;
+    border-bottom: none;
+}
+
+.chartsRow {
+    min-height: 520px;
+    height: 100%;
+}
+
+.chartsFlexRow {
+    display: flex;
+    gap: 24px;
+    min-height: 520px;
+}
+
+.chartsLeft,
+.chartsRight {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.chartsRightGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 12px;
+    height: 100%;
+}
+
+.chartsRightGrid > * {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chartsRightGrid :global(.ant-card) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 针对iPad等平板设备的响应式调整 */
+@media (max-width: 1024px) {
+    .container {
+        padding: 16px;
+    }
+    
+    /* 确保进度信息在iPad上不换行 */
+    .chartsLeft :global(.ant-card-body) {
+        padding: 12px 14px !important;
+    }
+    
+    .chartsLeft :global(.ant-col) {
+        padding: 0 4px;
+    }
+    
+    /* 在iPad上进一步优化字体大小 */
+    .chartsLeft :global(.ant-card-body) span {
+        font-size: 14px !important;
+    }
+    
+    .chartsLeft :global(.ant-card-body) span span {
+        font-size: 15px !important;
+    }
+}
+
+/* 针对小屏幕设备的进一步优化 */
+@media (max-width: 768px) {
+    .container {
+        padding: 12px;
+    }
+    
+    /* 在小屏幕上进一步压缩间距 */
+    .chartsLeft :global(.ant-card-body) {
+        padding: 10px 12px !important;
+    }
+    
+    .chartsLeft :global(.ant-col) {
+        padding: 0 2px;
+    }
+    
+    /* 在小屏幕上进一步优化字体大小 */
+    .chartsLeft :global(.ant-card-body) span {
+        font-size: 13px !important;
+    }
+    
+    .chartsLeft :global(.ant-card-body) span span {
+        font-size: 14px !important;
+    }
+} 
