@@ -1,6 +1,6 @@
 import request from '@/utils/request';
 import { BaseResponse, WordTaskInfo, SubmitAnswerParams, SubmitAnswerResponse, AnswerInfo, UserWordStatusStats } from '@/types';
-import { StudyRecordResponse, HardWordResponse, BatchListResponse, SetWordsParams} from '@/types/study';
+import { StudyRecordResponse, HardWordResponse, BatchListResponse, SetWordsParams, ProverbInfo } from '@/types/study';
 
 /**
  * 学习相关API
@@ -115,7 +115,19 @@ export const getHardWordRecordList = (fault_count?: number) => {
     params: fault_count !== undefined ? { fault_count } : {}
   });
 };
- 
+
+/**
+ * 谚语相关API
+ */
+export const proverbApi = {
+  
+  /**
+   * 获取每日一谚
+   */
+  getDailyProverb: () => {
+    return request.get<BaseResponse<{ proverb: string; chinese_exp: string }>>('/proverb/get_proverb_for_display');
+  },
+};
 
 /**
  * 标签设置相关API

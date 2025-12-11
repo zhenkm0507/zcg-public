@@ -1,7 +1,7 @@
 // API配置
 export const API_CONFIG = {
     // API基础URL
-    BASE_URL: process.env.NEXT_PUBLIC_API_URL || 'http://192.168.0.103:8000',
+    BASE_URL: process.env.NEXT_PUBLIC_API_URL || 'http://192.168.0.101:8000',
     
     // API版本
     VERSION: 'v1',

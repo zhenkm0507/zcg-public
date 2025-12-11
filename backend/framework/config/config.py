@@ -50,7 +50,7 @@ class Settings(BaseSettings):
     
     # CORS配置
     CORS_ORIGINS: List[str] = Field(
-        default=["http://192.168.0.103:3000","http://192.168.0.103:8000"]
+        default=["http://192.168.0.101:3000","http://192.168.0.101:8000"]
     )
     CORS_ALLOW_METHODS: List[str] = Field(default=["*"])
     CORS_ALLOW_HEADERS: List[str] = Field(default=["*"])

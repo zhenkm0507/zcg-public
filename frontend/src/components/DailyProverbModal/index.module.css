@@ -1,0 +1,130 @@
+.modalWrap {
+  backdrop-filter: blur(4px);
+}
+
+.modal :global(.ant-modal-content) {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.modal :global(.ant-modal-content)::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #000000, #333333);
+  z-index: -1;
+  border-radius: 14px;
+  opacity: 0.1;
+}
+
+.modal :global(.ant-modal-body) {
+  padding: 0;
+}
+
+.content {
+  padding: 40px;
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 32px;
+}
+
+.title {
+  color: #000000;
+  font-size: 28px;
+  font-family: "子漆逍遥行", "FZZiQiXiaoYaoXing", serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+  font-weight: normal;
+}
+
+.subtitle {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  font-family: "子漆逍遥行", "FZZiQiXiaoYaoXing", serif;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.proverbSection {
+  margin-bottom: 32px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.proverbText {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  font-family: "子漆逍遥行", "FZZiQiXiaoYaoXing", serif;
+  letter-spacing: 1px;
+}
+
+.chineseText {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.5;
+  font-family: "子漆逍遥行", "FZZiQiXiaoYaoXing", serif;
+  letter-spacing: 1px;
+}
+
+.footer {
+  text-align: center;
+}
+
+.closeButton {
+  height: 44px;
+  font-size: 16px;
+  background: #000000;
+  border: none;
+  border-radius: 6px;
+  transition: all 0.3s;
+  font-family: "子漆逍遥行", "FZZiQiXiaoYaoXing", serif;
+  letter-spacing: 2px;
+  padding: 0 32px;
+  width: 120px;
+}
+
+.closeButton:hover {
+  background: #333333;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .content {
+    padding: 30px 24px;
+  }
+  
+  .title {
+    font-size: 24px;
+  }
+  
+  .proverbSection {
+    padding: 20px;
+  }
+  
+  .proverbText {
+    font-size: 16px;
+  }
+  
+  .chineseText {
+    font-size: 14px;
+  }
+}
+
+.loginPage {} 

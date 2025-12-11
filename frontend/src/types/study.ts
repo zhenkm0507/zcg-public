@@ -218,6 +218,14 @@ export interface SetWordsParams {
   }[];
 }
 
+/**
+ * 谚语信息
+ */
+export interface ProverbInfo {
+  proverb: string;
+  chinese_exp: string;
+}
+
 // 标签设置相关类型
 export interface SetUserWordFlagsParams {
   operate_type: 1 | 2; // 1:增加标签，2:删除标签
