@@ -382,6 +382,10 @@ function LayoutInner({ children }: LayoutProps) {
                     key: '/study/word_bank/inflections',
                     label: '变形形式',
                 },
+                {
+                    key: '/study/word_bank/proverbs',
+                    label: '谚语',
+                },
             ],
         },
         {

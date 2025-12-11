@@ -1,0 +1,40 @@
+.container {
+  padding: 24px;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.filterSection {
+  margin-bottom: 24px;
+  padding: 16px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+}
+
+.searchInput {
+  width: 300px;
+}
+
+.tableSection {
+  background-color: #ffffff;
+}
+
+.proverbTable {
+  margin-top: 16px;
+}
+
+.proverbCell {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.chineseExpCell {
+  color: #5a6c7d;
+}
+
+.paginationContainer {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+}
