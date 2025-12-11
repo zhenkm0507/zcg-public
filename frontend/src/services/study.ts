@@ -1,6 +1,6 @@
 import request from '@/utils/request';
 import { BaseResponse, WordTaskInfo, SubmitAnswerParams, SubmitAnswerResponse, AnswerInfo, UserWordStatusStats } from '@/types';
-import { StudyRecordResponse, HardWordResponse, BatchListResponse, SetWordsParams, ProverbInfo } from '@/types/study';
+import { StudyRecordResponse, HardWordResponse, BatchListResponse, SetWordsParams, ProverbInfo, ProverbItem } from '@/types/study';
 
 /**
  * 学习相关API
@@ -126,6 +126,13 @@ export const proverbApi = {
    */
   getDailyProverb: () => {
     return request.get<BaseResponse<{ proverb: string; chinese_exp: string }>>('/proverb/get_proverb_for_display');
+  },
+
+  /**
+   * 获取谚语列表
+   */
+  getProverbList: () => {
+    return request.get<BaseResponse<ProverbItem[]>>('/proverb/get_proverb_list');
   },
 };
 

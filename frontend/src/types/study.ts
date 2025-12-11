@@ -226,6 +226,20 @@ export interface ProverbInfo {
   chinese_exp: string;
 }
 
+/**
+ * 谚语列表项
+ */
+export interface ProverbItem {
+  id: number;
+  proverb: string;
+  chinese_exp: string;
+}
+
+/**
+ * 谚语列表响应
+ */
+export interface ProverbListResponse extends BaseResponse<ProverbItem[]> {}
+
 // 标签设置相关类型
 export interface SetUserWordFlagsParams {
   operate_type: 1 | 2; // 1:增加标签，2:删除标签
