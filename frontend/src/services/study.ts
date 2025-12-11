@@ -127,6 +127,13 @@ export const proverbApi = {
   getDailyProverb: () => {
     return request.get<BaseResponse<{ proverb: string; chinese_exp: string }>>('/proverb/get_proverb_for_display');
   },
+  
+  /**
+   * 获取谚语列表
+   */
+  getProverbList: () => {
+    return request.get<BaseResponse<{ id: number; proverb: string; chinese_exp: string }[]>>('/proverb/get_proverb_list');
+  },
 };
 
 /**

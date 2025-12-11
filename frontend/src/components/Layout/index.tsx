@@ -371,19 +371,23 @@ function LayoutInner({ children }: LayoutProps) {
             label: '汗青廊',
         },
         {
-            key: '/study/word_bank',
-            label: '藏经枢',
-            children: [
-                {
-                    key: '/study/word_bank/list',
-                    label: '单词列表',
-                },
-                {
-                    key: '/study/word_bank/inflections',
-                    label: '变形形式',
-                },
-            ],
-        },
+        key: '/study/word_bank',
+        label: '藏经枢',
+        children: [
+            {
+                key: '/study/word_bank/list',
+                label: '单词列表',
+            },
+            {
+                key: '/study/word_bank/inflections',
+                label: '变形形式',
+            },
+            {
+                key: '/study/word_bank/proverbs',
+                label: '谚语集',
+            },
+        ],
+    },
         {
             key: '/settings',
             label: '揽月台',
