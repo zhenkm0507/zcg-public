@@ -1,0 +1,22 @@
+.container {
+  padding: 24px;
+  background: #fff;
+  min-height: 100vh;
+}
+
+.tableWrapper {
+  margin-top: 24px;
+}
+
+.proverbText {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-primary-dark, #4b3a1e);
+  font-weight: 500;
+}
+
+.chineseExpText {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #666;
+}
